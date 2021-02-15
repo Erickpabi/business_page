@@ -1,0 +1,11 @@
+#services{
+    top: 80%;
+    margin-left: 200px;
+    margin-right: 200px;
+    margin-top: 250px;
+color:#6c757d;
+width: 250px;
+cursor: pointer;
+display: inline-block;
+padding: 16px;
+}

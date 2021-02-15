@@ -1,4 +1,4 @@
-import React from 'react' 
+import React,{Component} from 'react' 
 import profile  from '../../assets/profile2.jpg'
 import 'bootstrap/dist/css/bootstrap.min.css';
 import classes from './About.module.css'
@@ -7,10 +7,36 @@ import laptop from '../../assets/laptop.jpg'
 import typing from '../../assets/typing.jpg'
 import excited from '../../assets/excited.jpg'
 import crowd from '../../assets/crowd.jpg'
+import axios from 'axios'
+import Card from '../Card/Card';
+class about extends Component{
 
-const about = (props) => {
-return(
-    <div >
+    state= {
+        post:[]
+      }
+    
+      componentDidMount () {
+        axios.get("https://fakestoreapi.com/products").then(response =>{
+            const posts = response.data;
+       const updatedPost =     posts.map(pos=>{
+                return {
+                ...pos
+             
+                }
+            })
+            this.setState({post:updatedPost})
+        })
+      }
+    
+    render(){
+        let posts = this.state.post.map
+     (posts => {
+return <Card key = {posts.id} title = {posts.title} image = {posts.image} price = {posts.price}/>
+        })
+        console.log(posts)
+   
+        return(
+<div >
         <section className={classes.about}>
        
 
@@ -19,40 +45,19 @@ return(
 <p id = {classes.para3}>process to deliver business transformation</p>
 <Button  variant="outline" id = {classes.learn}>Learn More</Button>{' '}
 
-<div id = {classes.services}>
-    <img src = {laptop}  height = "500" width = "400"alt = "profile"  />
-    <h5 style = {{fontWeight:'bold'}}>I.T Consulting</h5>
-    <p>The sharp expertise of a consulting firm combined</p>
-    <p> with the agility of a startup</p>
+{posts}
 
 
-<img src = {typing}  height = "500" width = "400"alt = "profile"  />
-    <h5 style = {{fontWeight:'bold'}}>Business Setup</h5>
-    <p>The sharp expertise of a consulting firm combined </p>
-    <p>with the agility of a startup</p>
 
-
-</div>
-
-<div id = {classes.agility}>
-  <img src = {excited}  height = "500" width = "400"alt = "profile"  />
-    <h5 style = {{fontWeight:'bold'}}>HR Solutions</h5>
-    <p>The sharp expertise of a consulting firm combined</p> 
-    <p>with the agility of a startup</p>
-
-
-<img src = {crowd}  height = "500" width = "400"alt = "profile"  />
-    <h5 style = {{fontWeight:'bold'}}>Company Development</h5>
-    <p>The sharp expertise of a consulting firm combined</p>
-    <p> with the agility of a startup</p>
-</div>
-
-<Button  variant="outline" id = {classes.about_button}>Let's Talk</Button>{' '}
 
 </section>
     </div>
-)
-}
+        )
+    }
+} 
+
+    
+
 
 
 

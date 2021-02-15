@@ -16,9 +16,11 @@ import { faGlobeAfrica } from '@fortawesome/free-solid-svg-icons'
 import About from '../About/About'
 
 
+
 class landingpage extends Component   {
 
- 
+  
+  
   render(){
  
    
@@ -62,6 +64,7 @@ class landingpage extends Component   {
     
   </section>
   <About/>
+ 
 
       </div>
     )

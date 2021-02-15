@@ -1,0 +1,79 @@
+.about{
+ 
+        font-family: 'Poppins', sans-serif !important;
+        font-size: 17px;
+        background-color:white;
+    color:#6c757d;
+}
+
+#para{
+        top: 60%;
+        margin-left: 700px;
+        margin-top: 180px;
+        padding:20px;
+        position: absolute;
+        font-size: 25px;
+        font-weight: bold;
+}
+
+#para2{
+        top: 65%;
+        margin-left: 500px;
+        margin-top: 200px;
+        padding:20px;
+        position: absolute;
+        
+        
+}
+#para3{
+        top: 68%;
+        margin-left: 500px;
+        margin-top: 200px;
+        padding:20px;
+        position: absolute;
+        
+        
+}
+#learn{
+        top: 75%;
+        margin-left: 750px;
+        margin-top: 220px;
+color:white;
+        position: absolute;
+        background-color:#F34EC1;
+}
+
+#services{
+        top: 80%;
+        margin-left: 200px;
+        margin-top: 250px;
+    color:#6c757d;
+ 
+  
+        position: absolute;
+     
+}
+
+#agility{
+        top: 80%;
+        margin-left: 900px;
+        padding: 5px;
+        margin-top: 250px;
+    color:#6c757d;
+ 
+  
+        position: absolute;
+     
+}
+
+#about_button{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        top: 35%;
+        margin-left: 750px;
+        margin-top: 1750px;
+        position: absolute;
+        background-color:#F34EC1;
+        color:white
+        }
